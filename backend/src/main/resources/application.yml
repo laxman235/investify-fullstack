@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:investify;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+gemini:
+  apiKey: ${AIzaSyBOelBIN7BVA82OYpjxP1b0USsdqCqfn_Y}
+  baseUrl: https://generativelanguage.googleapis.com/v1beta
+  model: models/gemini-1.5-flash
+
+dependencies:
+  - groupId: com.h2database
+    artifactId: h2
+    scope: runtime
