@@ -23,7 +23,7 @@ management:
         include: health,info
 
 gemini:
-  apiKey: ${AIzaSyBOelBIN7BVA82OYpjxP1b0USsdqCqfn_Y}
+  apiKey: ${}
   baseUrl: https://generativelanguage.googleapis.com/v1beta
   model: models/gemini-1.5-flash
 
